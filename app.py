@@ -1,4 +1,4 @@
-]import os
+import os
 from flask import Flask, request, redirect, url_for, send_file
 from werkzeug.utils import secure_filename
 import subprocess
