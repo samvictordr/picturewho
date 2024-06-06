@@ -76,5 +76,4 @@ Feel free to submit issues or pull requests if you have suggestions for improvem
 
 ## License
 
-This project is licensed under the CC0 License. Happy Coding!
-```
+This project is licensed under Creative Commons Zero. Happy Coding!
