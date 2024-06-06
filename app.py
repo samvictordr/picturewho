@@ -1,4 +1,4 @@
-import os
+]import os
 from flask import Flask, request, redirect, url_for, send_file
 from werkzeug.utils import secure_filename
 import subprocess
@@ -40,5 +40,9 @@ def upload_file():
     </form>
     '''
 
+# Define the application object for Gunicorn
+application = app
+
 if __name__ == '__main__':
-    app.run(debug=True)
+    # Run the app using Gunicorn
+    application.run(debug=True)
