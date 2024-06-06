@@ -13,53 +13,53 @@ A Python script to manage image metadata using `exiftool`. This script can extra
 
 To extract GPS data from an image and display it in the terminal:
 ```sh
-python script.py /path/to/image.jpg
+python picturewho.py /path/to/image.jpg
 ```
 
 ### Extract All Metadata
 
 To extract all metadata from an image and display it in the terminal:
 ```sh
-python script.py /path/to/image.jpg --all
+python picturewho.py /path/to/image.jpg --all
 ```
 
 ### Save Extracted GPS Data to a JSON File
 
 To extract GPS data and save it to a JSON file:
 ```sh
-python script.py /path/to/image.jpg --output output.json --format json
+python picturewho.py /path/to/image.jpg --output output.json --format json
 ```
 
 ### Save Extracted All Metadata to a CSV File
 
 To extract all metadata and save it to a CSV file:
 ```sh
-python script.py /path/to/image.jpg --all --output output.csv --format csv
+python picturewho.py /path/to/image.jpg --all --output output.csv --format csv
 ```
 
 ### Remove GPS Data from an Image
 
 To remove GPS data from an image:
 ```sh
-python script.py /path/to/image.jpg --remove-gps
+python picturewho.py /path/to/image.jpg --remove-gps
 ```
 
 ### Detailed Example Usage Scenarios
 
 1. **Extract GPS Data and Display in JSON Format**
    ```sh
-   python script.py /path/to/image.jpg --format json
+   python picturewho.py /path/to/image.jpg --format json
    ```
 
 2. **Extract All Metadata and Save to a Text File**
    ```sh
-   python script.py /path/to/image.jpg --all --output metadata.txt --format text
+   python picturewho.py /path/to/image.jpg --all --output metadata.txt --format text
    ```
 
 3. **Remove GPS Data and then Extract Remaining Metadata**
    ```sh
-   python script.py /path/to/image.jpg --remove-gps
-   python script.py /path/to/image.jpg --all --output metadata_after_removal.txt --format text
+   python picturewho.py /path/to/image.jpg --remove-gps
+   python picturewho.py /path/to/image.jpg --all --output metadata_after_removal.txt --format text
    ```
 
 ## Arguments
