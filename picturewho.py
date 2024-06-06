@@ -47,12 +47,20 @@ def format_gps_data(gps_data):
             formatted_data[key] = value  # Keep the original value in case of error
     return formatted_data
 
+def remove_gps_data(image_path):
+    try:
+        subprocess.run(['exiftool', '-gps:all=', '-overwrite_original', image_path], check=True)
+        print(f"GPS data removed from {image_path}.")
+    except subprocess.CalledProcessError as e:
+        print(f"An error occurred while removing GPS data: {e}")
+
 def main():
     parser = argparse.ArgumentParser(description="Extract GPS data from an image using exiftool.")
     parser.add_argument('image_path', type=str, help="Path to the image file")
     parser.add_argument('--all', action='store_true', help="Include all metadata, not just GPS data")
     parser.add_argument('--output', type=str, help="Path to save the output data")
     parser.add_argument('--format', choices=['json', 'csv', 'text'], default='text', help="Output format")
+    parser.add_argument('--remove-gps', action='store_true', help="Remove GPS data from the image")
     args = parser.parse_args()
 
     if not os.path.isfile(args.image_path):
@@ -60,6 +68,10 @@ def main():
         return
 
     check_exiftool()
+
+    if args.remove_gps:
+        remove_gps_data(args.image_path)
+        return
 
     metadata = get_metadata(args.image_path, include_all=args.all)
     if metadata:
