@@ -70,10 +70,6 @@ python script.py /path/to/image.jpg --remove-gps
 - `--format`: Output format (`json`, `csv`, `text`). Default is `text`.
 - `--remove-gps`: Remove GPS data from the image.
 
-## Contributing
-
-Feel free to submit issues or pull requests if you have suggestions for improvements or new features.
-
 ## License
 
 This project is licensed under Creative Commons Zero. Happy Coding!
